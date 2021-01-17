@@ -8,6 +8,15 @@ import CounterThree from './components/CounterThree';
 import CounterTwo from './components/CounterTwo'
 import DataFetchingOne from './components/DataFetchingOne';
 import DataFetchingTwo from './components/DataFetchingTwo';
+import Counter from './components/Counter';
+import FocusInput from './components/FocusInput';
+import ClassTimer from './components/ClassTimer';
+import HookTimer from './components/HookTimer';
+import DotTitleOne from './components/DotTitleOne';
+import DotTitleTwo from './components/DocTitleTwo';
+import CounterOneHook from './hook/CounterOneHook';
+import CounterTwoHook from './hook/CounterTwoHook';
+import UserForm from './components/UserForm';
 
 export const CountContext = React.createContext();
 // USEREDUCER + USECONTEXT
@@ -30,18 +39,28 @@ const reducer = (state, action) =>{
 function App() {
   const [count, dispatch] = useReducer(reducer, initialState);
   return (
-    <DataFetchingTwo/>
-    // <DataFetchingOne/>
-    // <CountContext.Provider value ={{countState:count, countDispatch:dispatch}}>
-    //   <div className="App">
-    //     Count : {count}
-    //   <ComponentA/>
-    //   <ComponentB/>
-    //   <ComponentC/>
-    //   {/* <CounterThree/> */}
-    //   {/* <CounterTwo/> */}
-    //   {/* <CounterOne/> */}
-    // </div>
+      // <CountContext.Provider value ={{countState:count, countDispatch:dispatch}}>
+      <div className="App">
+          <UserForm/>
+      {/* <CounterTwoHook/>
+    <CounterOneHook/> */}
+       {/* <DotTitleTwo />
+       <DotTitleOne/>
+       <HookTimer/>
+       <ClassTimer/>
+       <FocusInput/>
+       <Counter/>
+     <DataFetchingTwo/>
+     <DataFetchingOne/>
+{/*      */}
+         {/* Count : {count}  */}
+       {/* <ComponentA/>
+      <ComponentB/>   
+      <ComponentC/> */}
+       {/* <CounterThree/> */}
+       {/* <CounterTwo/> */}
+     {/* <CounterOne/> */}
+     </div>
     // </CountContext.Provider>
   );
 }
